@@ -1,4 +1,5 @@
-# Label-free tracking of acute lymphoblastic leukemia by deep learning
+# Label-free monitoring of acute lymphoblastic leukemia by computer vision
+
 Analytic scripts for Doan et al. (2019), "Label-free tracking of acute lymphoblastic leukemia by computer vision"
 
 Throughout this pipeline, imaging flow cytometry single-cell images (.CIF format) are resized to 48 x 48 pixels by cropping the peripheral background or padding channel-wise with randomly distributed noise sampled from the background. Additionally, cell images were contrast-stretched channel-wise to rescale the intensities between the 0.5 and 99.5 percentiles to the full range of uint8, [0, 256). We adopted ResNet architecture using a Python framework [Keras-resnet](https://github.com/broadinstitute/keras-resnet). The network includes 50 convolutional layers, forming repetitive blocks that perform residual learning, followed by fully connected and softmax layers.
